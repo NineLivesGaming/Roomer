@@ -29,3 +29,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Roomer/Assembly-CSharp.csproj
+Roomer/Assembly-CSharp.csproj
+*.csproj
