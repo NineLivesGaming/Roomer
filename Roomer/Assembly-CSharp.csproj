@@ -47,6 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\basicMovement.cs" />
      <Compile Include="Assets\Scripts\doorScript.cs" />
+     <Compile Include="Assets\Scripts\gameMaster.cs" />
+     <Compile Include="Assets\Scripts\roomMaster.cs" />
      <Compile Include="Assets\Scripts\timedPlatform.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
