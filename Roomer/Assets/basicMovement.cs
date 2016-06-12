@@ -71,7 +71,8 @@ public class basicMovement : MonoBehaviour {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 ((GetComponent<Rigidbody2D> ().velocity.x * dragLevel), GetComponent<Rigidbody2D> ().velocity.y);
 		}
 	}
-	void OnCollisionEnter2D(Collision2D coll) {
+	 
+	void OnTriggerStay2D(Collider2D coll) {
 		if (coll.gameObject.tag == "Ground") {
 			isJumping = false;
 			hasDoubleJumped = false;
