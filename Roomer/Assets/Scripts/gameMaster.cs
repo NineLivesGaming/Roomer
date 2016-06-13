@@ -11,13 +11,16 @@ public class gameMaster : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		DontDestroyOnLoad (this);
 		health = maxHealth;
+	}
+
+	void Awake(){
+		DontDestroyOnLoad (this);
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("mainMenu");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
 	public int getSpawnPoint(){

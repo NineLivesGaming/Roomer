@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/doorTestingRoom1.unity
+    path: Assets/Scenes/astgenTest/pregameRoll.unity
   - enabled: 1
+    path: Assets/Scenes/astgenTest/mainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/astgenTest/startRoom.unity
+  - enabled: 0
+    path: Assets/Scenes/doorTestingRoom1.unity
+  - enabled: 0
     path: Assets/Scenes/doorTestingRoom2.unity
