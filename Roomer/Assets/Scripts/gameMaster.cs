@@ -5,13 +5,14 @@ public class gameMaster : MonoBehaviour {
 
 	private int maxHealth = 10, health;
 
-	public int spawnPoint = 0;
+	public int spawnPoint;
 
 	public bool timeSlow = false;
 
 	// Use this for initialization
 	void Start () {
 		health = maxHealth;
+		spawnPoint = 0;
 	}
 
 	void Awake(){

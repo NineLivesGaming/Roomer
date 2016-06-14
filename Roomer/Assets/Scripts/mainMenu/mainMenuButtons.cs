@@ -25,4 +25,8 @@ public class mainMenuButtons : MonoBehaviour{
 	public void onBackButtonClick(){
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("mainMenu");
 	}
+
+	public void onNewGameButtonClick(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("startRoom");
+	}
 }

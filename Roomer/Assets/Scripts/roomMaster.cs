@@ -8,10 +8,12 @@ public class roomMaster : MonoBehaviour {
 
 	public GameObject playerPrefab;
 
+	public GameObject player;
+
 	[System.Serializable]
 	public class spawnArray
 	{
-		public int[] points = new int[2];
+		public float[] points = new float[2];
 	}
 	public spawnArray[] spawnPoints;
 
@@ -19,20 +21,23 @@ public class roomMaster : MonoBehaviour {
 	}
 
 	void Awake(){
-		respawnPlayer (false);
-		GM = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<gameMaster>();
+		GM = GameObject.FindWithTag("GameMaster").GetComponent<gameMaster>();
 		spawnPoint = GM.getSpawnPoint ();
+
+		respawnPlayer (false);
 	}
 
 	public void respawnPlayer(bool resetHealth){
-		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+		player = GameObject.FindWithTag ("Player");
 		if(player == null){
-			player = Instantiate (playerPrefab);
+			Instantiate (playerPrefab);
+			player = GameObject.FindWithTag ("Player");
 		}
 		if(resetHealth){
 			GM.addHealth (99);
 		}
-		player.transform.localPosition.Set (spawnPoints [spawnPoint].points[0], spawnPoints [spawnPoint].points[1], -1);
+		player.transform.position = new Vector3 (spawnPoints [spawnPoint].points[0], spawnPoints [spawnPoint].points[1], -1);
+		//player.transform.localPosition.Set (spawnPoints [spawnPoint].points[0], spawnPoints [spawnPoint].points[1], -1);
 	}
 
 	void Update () {

@@ -3,9 +3,14 @@ using System.Collections;
 
 public class doorScript : MonoBehaviour {
 
+	public string newRoom;
+	public int spawnPoint;
+
+	private gameMaster GM;
+
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+		GM = GameObject.FindWithTag("GameMaster").GetComponent<gameMaster>();
 	}
 	
 	// Update is called once per frame
@@ -15,7 +20,8 @@ public class doorScript : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D coll) {
 		if (coll.gameObject.tag == "Player" && Input.GetKeyDown("w")) {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (1);
+			GM.setSpawnPoint (spawnPoint);
+			UnityEngine.SceneManagement.SceneManager.LoadScene (newRoom);
 		}
 	}
 }

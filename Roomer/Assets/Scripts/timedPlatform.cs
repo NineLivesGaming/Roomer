@@ -24,7 +24,7 @@ public class timedPlatform : MonoBehaviour {
 	}
 
 	void Awake(){
-		GM = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<gameMaster>();
+		GM = GameObject.FindWithTag("GameMaster").GetComponent<gameMaster>();
 	}
 	
 	// Update is called once per frame
