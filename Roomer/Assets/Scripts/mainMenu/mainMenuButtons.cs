@@ -7,19 +7,19 @@ public class mainMenuButtons : MonoBehaviour{
 	}
 
 	public void onCreditsClick(){
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("credits");
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("creditsMenu");
 	}
 
 	public void onOptionsClick(){
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("options");
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("optionsMenu");
 	}
 
 	public void onLoadGameClick(){
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("leadGame");
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("loadGameMenu");
 	}
 
 	public void onStartGameClick(){
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("startGame");
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("startGameMenu");
 	}
 
 	public void onBackButtonClick(){
